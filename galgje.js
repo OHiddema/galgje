@@ -14,12 +14,13 @@ function arrayBtn(){
 $(function () {
 
   $('.dynaBtn').click(function () {
+
     let wordToGuess = $('#guessWord').val().toUpperCase();
     let letterToSearch = this.innerHTML;
 
     for (let i=0; i<wordToGuess.length; i++) {
       if (wordToGuess.substr(i,1) == letterToSearch) {
-        console.log(i);
+        $('.fillWord').eq(i).html(letterToSearch);
       }
     }
   });
@@ -27,6 +28,7 @@ $(function () {
   $('#btnCreate').click(function () {
     let elem = document.createElement('br');
     document.body.appendChild(elem);
+
 
     for (let i=1; i<= $('#guessWord').val().length; i++ ) {
       let elem = document.createElement('div');

@@ -10,3 +10,6 @@ Step 2:
 - After the word to be guessed is entered, dynamiccaly create n elements,
   where n is the number of letters in the word to be guesed.
   These elements will be filled later with the letters that have been guessed correctly.
+
+Step 3:
+- When A..Z is clicked, the positions found in step 1 nust be filled in 'fillWord'
