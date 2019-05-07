@@ -1,3 +1,5 @@
+var wrongGuesses = 0;
+
 arrayBtn();
 
 function arrayBtn(){
@@ -14,16 +16,22 @@ function arrayBtn(){
 $(function () {
 
   $('.dynaBtn').click(function () {
+    var found = false;
 
     let wordToGuess = $('#guessWord').val().toUpperCase();
     let letterToSearch = this.innerHTML;
 
     for (let i=0; i<wordToGuess.length; i++) {
       if (wordToGuess.substr(i,1) == letterToSearch) {
+        found = true;
         $('.fillWord').eq(i).html(letterToSearch);
       }
     }
-  });
+    if (found === false) {
+      wrongGuesses +=1;
+      $('#lblFouteBeurten').html(wrongGuesses);
+    }
+});
 
   $('#btnCreate').click(function () {
     let elem = document.createElement('br');

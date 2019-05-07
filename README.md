@@ -13,3 +13,6 @@ Step 2:
 
 Step 3:
 - When A..Z is clicked, the positions found in step 1 nust be filled in 'fillWord'
+
+Step 4:
+- Count the number of wrong guesses and display that number.
