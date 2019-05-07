@@ -27,9 +27,25 @@ $(function () {
         $('.fillWord').eq(i).html(letterToSearch);
       }
     }
+
+    if (found === true) {   //check if we guessed the whole word correct
+      let allCorrect = true;
+      for (let i=0; i<wordToGuess.length; i++) {
+        if (wordToGuess.substr(i,1) !== $('.fillWord').eq(i).html()) {
+          allCorrect = false;
+        }
+      }
+      if (allCorrect === true) {
+        alert('Gefeliciteerd! Je hebt gewonnen!');
+      }
+    }
+
     if (found === false) {
       wrongGuesses +=1;
       $('#lblFouteBeurten').html(wrongGuesses);
+      if (wrongGuesses === 10) {
+        alert('Helaas pindakaas! Je hebt 10 foute beurten gemaakt, dus verloren.');
+      }
     }
 });
 

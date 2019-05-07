@@ -19,3 +19,8 @@ Step 4:
 
 Step 5 (executed in branch 'bugfix')
 - Problem with vertical alignment of elements fixed
+
+Step 6
+- Check if you have won or lost and give an alert message if so.
+- Lost: Aantal foute beurten = 10;
+- Won: You guessed the whole word.
