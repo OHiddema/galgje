@@ -43,6 +43,10 @@ $(function () {
       elem.setAttribute('class', 'fillWord');
       document.body.appendChild(elem);  
     }
+
+    // dirty fix!
+    $('.fillWord').html('.');
+    // dirty fix!
     
   })
 });

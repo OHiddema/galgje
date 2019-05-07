@@ -16,3 +16,6 @@ Step 3:
 
 Step 4:
 - Count the number of wrong guesses and display that number.
+
+Step 5 (executed in branch 'bugfix')
+- Problem with vertical alignment of elements fixed
