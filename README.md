@@ -4,3 +4,9 @@ First steps to get a working concept:
 - Dynamiccaly add 26 clickable elements on the page (A..Z).
 - When the user clicks, for example, element E, check for occurences of the letter E
   in the word to be guessed, an write the position(s) of this letter to the console.
+
+Step 2:
+
+- After the word to be guessed is entered, dynamiccaly create n elements,
+  where n is the number of letters in the word to be guesed.
+  These elements will be filled later with the letters that have been guessed correctly.

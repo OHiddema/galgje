@@ -24,4 +24,15 @@ $(function () {
     }
   });
 
+  $('#btnCreate').click(function () {
+    let elem = document.createElement('br');
+    document.body.appendChild(elem);
+
+    for (let i=1; i<= $('#guessWord').val().length; i++ ) {
+      let elem = document.createElement('div');
+      elem.setAttribute('class', 'fillWord');
+      document.body.appendChild(elem);  
+    }
+    
+  })
 });

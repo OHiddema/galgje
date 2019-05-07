@@ -1,4 +1,4 @@
-.dynaBtn{
+.dynaBtn, .fillWord{
   display: inline-flex;
   margin-right: 5px;
 
@@ -10,6 +10,11 @@
   transition-duration: 1s;
   transition: background-color 2s;
   cursor: pointer;
+}
+
+.fillWord {
+  margin-top: 50px;
+  height: 22px;
 }
 
 .dynaBtn:hover{
