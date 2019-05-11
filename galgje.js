@@ -16,28 +16,30 @@ function arrayBtn() {
 
 $(function () {
 
+  let wordArray = ['ik', 'aap', 'code', 'fiets', 'winkel', 'kammen', 'lineaal', 'database', 'aardappel', 'javascript'];
+  let rndIndex = Math.floor(wordArray.length * Math.random());
+  let wordToGuess = wordArray[rndIndex].toUpperCase();
+
   // Dynamically create placeholders for the letters of the word to be guessed
-  $('#btnCreate').click(function () {
-    let elem = document.createElement('br');
+  let elem = document.createElement('br');
+  document.body.appendChild(elem);
+
+  for (let i = 1; i <= wordToGuess.length; i++) {
+    let elem = document.createElement('div');
+    elem.setAttribute('class', 'fillWord');
     document.body.appendChild(elem);
+  }
 
-    for (let i = 1; i <= $('#guessWord').val().length; i++) {
-      let elem = document.createElement('div');
-      elem.setAttribute('class', 'fillWord');
-      document.body.appendChild(elem);
-    }
+  // dirty fix!
+  $('.fillWord').html('.');
+  // dirty fix!
 
-    // dirty fix!
-    $('.fillWord').html('.');
-    // dirty fix!
-
-  })
 
   // The user chooses a letter
   $('.alphabetBtn').click(function () {
     var found = false;
 
-    let wordToGuess = $('#guessWord').val().toUpperCase();
+    // let wordToGuess = wordToGuess.toUpperCase();
     let letterToSearch = this.innerHTML;
 
     // Check if the chosen letter is in the word to be guessed
